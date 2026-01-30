@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "URL Safety Checker",
+  "version": "1.0.0",
+  "description": "Check if a URL is safe.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "tabs",
+    "contextMenus"
+  ],
+  "host_permissions": [
+    "http://localhost/*",
+    "https://www.virustotal.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Check URL Safety"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
