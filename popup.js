@@ -1,4 +1,4 @@
-const SERVER_URL = 'https://safeurl-beta.vercel.app/api/scan';
+const SERVER_URL = 'https://safeurl-beta.vercel.app/api';
 
 document.getElementById('scanBtn').addEventListener('click', scanUrl);
 document.getElementById('scanCurrentBtn').addEventListener('click', scanCurrentTab);
@@ -45,7 +45,7 @@ async function performScan(url) {
         const data = await response.json();
         displayResults(data);
     } catch (error) {
-        showError(`Error scanning URL: ${error.message}. Make sure the server is running on ${SERVER_URL}`);
+        showError(`Something went wrong, Please retry.`);
     } finally {
         showLoading(false);
     }
